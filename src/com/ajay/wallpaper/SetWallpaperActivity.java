@@ -11,13 +11,14 @@ public class SetWallpaperActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
+    launchWallpaper();
   }
 
-  public void onClick(View view) {
+  public void launchWallpaper() {
     Intent intent = new Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
     intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
         new ComponentName(this, MyWallpaperService.class));
     startActivity(intent);
+    finish();
   }
 } 

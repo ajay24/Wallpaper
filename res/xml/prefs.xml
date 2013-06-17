@@ -7,8 +7,21 @@
     </CheckBoxPreference>
 
     <EditTextPreference
-        android:key="numberOfCircles"
-        android:title="Number of Circles" >
+        android:defaultValue="4"
+        android:key="numberOfPoints"
+        android:title="Number of Points" >
     </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="Ajay"
+        android:key="text"
+        android:title="Enter the text" >
+    </EditTextPreference>
+
+    <ListPreference
+        android:defaultValue="#00ff0000"
+        android:key="color"
+        android:title="Choose Color"
+        android:entries="@array/entries"
+        android:entryValues="@array/values" />
 
 </PreferenceScreen>

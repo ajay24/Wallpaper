@@ -14,11 +14,12 @@ public class MyPreferencesActivity extends PreferenceActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         addPreferencesFromResource(R.xml.prefs);
 
-        Preference circlePreference = getPreferenceScreen().findPreference("numberOfCircles");
+        Preference numberofPointsPreference = getPreferenceScreen().findPreference("numberOfPoints");
         
-        circlePreference.setOnPreferenceChangeListener(numberCheckListener);
+        numberofPointsPreference.setOnPreferenceChangeListener(numberCheckListener);
     }
 
     Preference.OnPreferenceChangeListener numberCheckListener=new OnPreferenceChangeListener() {
